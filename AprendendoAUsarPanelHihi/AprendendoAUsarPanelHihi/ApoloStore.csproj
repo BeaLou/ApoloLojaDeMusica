@@ -71,11 +71,17 @@
     <Compile Include="DB\Codigos\Pedido\PedidoItemBusiness.cs" />
     <Compile Include="DB\Codigos\Pedido\PedidoItemDatabase.cs" />
     <Compile Include="DB\Codigos\Pedido\PedidoItemDTO.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="ApoloStore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ApoloStore.Designer.cs">
+      <DependentUpon>ApoloStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\frmConsultarInstruAcessorio.cs">
       <SubType>UserControl</SubType>
@@ -121,8 +127,11 @@
     <Compile Include="Telas\frmSalvarPedido.Designer.cs">
       <DependentUpon>frmSalvarPedido.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ApoloStore.resx">
+      <DependentUpon>ApoloStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmConsultarInstruAcessorio.resx">
       <DependentUpon>frmConsultarInstruAcessorio.cs</DependentUpon>
@@ -233,6 +242,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB\DB Script.txt" />
+    <None Include="Resources\tumblr_nxqdzzBYU11qg2cg0o1_1280.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

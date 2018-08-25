@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace AprendendoAUsarPanelHihi
 {
-    public partial class Form1 : Form
+    public partial class ApoloStore : Form
     {
-        public Form1()
+        public ApoloStore()
         {
             InitializeComponent();
         }

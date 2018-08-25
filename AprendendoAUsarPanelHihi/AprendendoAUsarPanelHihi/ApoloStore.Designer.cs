@@ -1,6 +1,6 @@
 ﻿namespace AprendendoAUsarPanelHihi
 {
-    partial class Form1
+    partial class ApoloStore
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -174,7 +174,7 @@
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
-            // Form1
+            // ApoloStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,9 +186,9 @@
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "ApoloStore";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Apolo Store";
             this.panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnFiltrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPedido)).EndInit();

@@ -50,10 +50,10 @@
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.Location = new System.Drawing.Point(33, 112);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(177, 33);
+            this.lblNome.Size = new System.Drawing.Size(140, 35);
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Instrumento:";
             // 
@@ -68,10 +68,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(39, 161);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 33);
+            this.label1.Size = new System.Drawing.Size(129, 35);
             this.label1.TabIndex = 4;
             this.label1.Text = "Quantidade:";
             // 
@@ -86,10 +86,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(58, 208);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 33);
+            this.label2.Size = new System.Drawing.Size(111, 35);
             this.label2.TabIndex = 6;
             this.label2.Text = "Acessório:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -97,20 +97,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(33, 259);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 33);
+            this.label3.Size = new System.Drawing.Size(129, 35);
             this.label3.TabIndex = 8;
             this.label3.Text = "Quantidade:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(90, 374);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 33);
+            this.label7.Size = new System.Drawing.Size(91, 35);
             this.label7.TabIndex = 12;
             this.label7.Text = "Cliente:";
             // 
@@ -133,10 +133,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(33, 306);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(171, 33);
+            this.label8.Size = new System.Drawing.Size(126, 35);
             this.label8.TabIndex = 20;
             this.label8.Text = "Pagamento:";
             // 
@@ -154,10 +154,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(304, 50);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(105, 33);
+            this.label9.Size = new System.Drawing.Size(81, 35);
             this.label9.TabIndex = 22;
             this.label9.Text = "Pedido";
             // 
