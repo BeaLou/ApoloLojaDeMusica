@@ -1,0 +1,95 @@
+drop database ApoloDB;
+create database ApoloDB;
+use ApoloDB;
+
+
+CREATE TABLE `tb_cliente` (
+	`id_cliente` int NOT NULL AUTO_INCREMENT,
+	`nm_cliente` varchar(50) NOT NULL,
+	`nm_sobrenome` varchar(50) NOT NULL,
+	`ds_cpf` char(11) NOT NULL,
+	`ds_cep` char(8) NOT NULL,
+	`nm_usuario` varchar(100) NOT NULL,
+	`ds_senha` varchar(100) NOT NULL,
+	`nr_casa` varchar(100) NOT NULL,
+	`ds_complemento` varchar(100) NOT NULL,
+	`ds_email` varchar(100) NOT NULL,
+	PRIMARY KEY (`id_cliente`)
+);
+
+CREATE TABLE `tb_pedido` (
+	`id_pedido` int NOT NULL AUTO_INCREMENT,
+	`id_cliente` int NOT NULL,
+	`dt_venda` DATETIME NOT NULL,
+	`ds_formapagamento` varchar(20) NOT NULL,
+	PRIMARY KEY (`id_pedido`)
+);
+
+CREATE TABLE `tb_categoria` (
+	`id_categoria` int NOT NULL AUTO_INCREMENT,
+	`nm_categoria` varchar(50) NOT NULL,
+	PRIMARY KEY (`id_categoria`)
+);
+
+CREATE TABLE `tb_pedidoitem` (
+	`id_pedidoitem` int NOT NULL AUTO_INCREMENT,
+	`id_pedido` int NOT NULL,
+	`id_instrumento` int NOT NULL,
+	`id_acessorio` int NOT NULL,
+	PRIMARY KEY (`id_pedidoitem`)
+);
+
+CREATE TABLE `tb_instrumento` (
+	`id_instrumento` int NOT NULL AUTO_INCREMENT,
+	`nm_instrumento` varchar(100) NOT NULL,
+	`vl_instrumento` DECIMAL NOT NULL,
+	`id_categoria` int NOT NULL,
+	PRIMARY KEY (`id_instrumento`)
+);
+
+CREATE TABLE `tb_acessorio` (
+	`id_acessorio` int NOT NULL AUTO_INCREMENT,
+	`nm_acessorio` varchar(50) NOT NULL,
+	`vl_acessorio` DECIMAL NOT NULL,
+	`id_categoria` int NOT NULL,
+	PRIMARY KEY (`id_acessorio`)
+);
+
+ALTER TABLE `tb_pedido` ADD CONSTRAINT `tb_pedido_fk0` FOREIGN KEY (`id_cliente`) REFERENCES `tb_cliente`(`id_cliente`);
+
+ALTER TABLE `tb_pedidoitem` ADD CONSTRAINT `tb_pedidoitem_fk0` FOREIGN KEY (`id_pedido`) REFERENCES `tb_pedido`(`id_pedido`);
+
+ALTER TABLE `tb_pedidoitem` ADD CONSTRAINT `tb_pedidoitem_fk1` FOREIGN KEY (`id_instrumento`) REFERENCES `tb_instrumento`(`id_instrumento`);
+
+ALTER TABLE `tb_pedidoitem` ADD CONSTRAINT `tb_pedidoitem_fk2` FOREIGN KEY (`id_acessorio`) REFERENCES `tb_acessorio`(`id_acessorio`);
+
+ALTER TABLE `tb_instrumento` ADD CONSTRAINT `tb_instrumento_fk0` FOREIGN KEY (`id_categoria`) REFERENCES `tb_categoria`(`id_categoria`);
+
+ALTER TABLE `tb_acessorio` ADD CONSTRAINT `tb_acessorio_fk0` FOREIGN KEY (`id_categoria`) REFERENCES `tb_categoria`(`id_categoria`);
+
+Insert into tb_categoria(nm_categoria)VALUES("Percussão");
+Insert into tb_categoria(nm_categoria)VALUES("Sopro");
+Insert into tb_categoria(nm_categoria)VALUES("Corda");
+Insert into tb_categoria(nm_categoria)VALUES("Eletrônico");
+
+create view vw_pedido_consultar as 
+  select tb_pedido.id_pedido,
+		 tb_pedido.dt_venda,
+         tb_pedido.ds_formapagamento,
+         tb_cliente.nm_cliente,
+         count(tb_pedidoitem.id_pedidoitem)  as qtd_items,
+         sum(tb_instrumento.vl_instrumento + tb_acessorio.vl_acessorio) as vl_total
+         from tb_pedido
+         join tb_pedidoitem
+         on tb_pedido.id_pedido = tb_pedidoitem.id_pedido
+         join tb_instrumento
+         on tb_pedidoitem.id_instrumento = tb_instrumento.id_instrumento
+         join tb_acessorio
+		 on tb_pedidoitem.id_acessorio = tb_acessorio.id_acessorio
+         join tb_cliente
+         on tb_pedido.id_cliente = tb_cliente.id_cliente
+         group 
+         by tb_pedido.id_pedido,
+		 tb_pedido.dt_venda,
+         tb_pedido.ds_formapagamento,
+         tb_cliente.nm_cliente;

@@ -1,0 +1,11 @@
+C:\Users\Beatriz\source\repos\AprendendoAUsarPanelHihi\AprendendoAUsarPanelHihi\bin\Debug\AprendendoAUsarPanelHihi.exe.config
+C:\Users\Beatriz\source\repos\AprendendoAUsarPanelHihi\AprendendoAUsarPanelHihi\bin\Debug\AprendendoAUsarPanelHihi.exe
+C:\Users\Beatriz\source\repos\AprendendoAUsarPanelHihi\AprendendoAUsarPanelHihi\bin\Debug\AprendendoAUsarPanelHihi.pdb
+C:\Users\Beatriz\source\repos\AprendendoAUsarPanelHihi\AprendendoAUsarPanelHihi\obj\Debug\AprendendoAUsarPanelHihi.csprojResolveAssemblyReference.cache
+C:\Users\Beatriz\source\repos\AprendendoAUsarPanelHihi\AprendendoAUsarPanelHihi\obj\Debug\AprendendoAUsarPanelHihi.Form1.resources
+C:\Users\Beatriz\source\repos\AprendendoAUsarPanelHihi\AprendendoAUsarPanelHihi\obj\Debug\AprendendoAUsarPanelHihi.Properties.Resources.resources
+C:\Users\Beatriz\source\repos\AprendendoAUsarPanelHihi\AprendendoAUsarPanelHihi\obj\Debug\AprendendoAUsarPanelHihi.csproj.GenerateResource.cache
+C:\Users\Beatriz\source\repos\AprendendoAUsarPanelHihi\AprendendoAUsarPanelHihi\obj\Debug\AprendendoAUsarPanelHihi.csproj.CoreCompileInputs.cache
+C:\Users\Beatriz\source\repos\AprendendoAUsarPanelHihi\AprendendoAUsarPanelHihi\obj\Debug\AprendendoAUsarPanelHihi.exe
+C:\Users\Beatriz\source\repos\AprendendoAUsarPanelHihi\AprendendoAUsarPanelHihi\obj\Debug\AprendendoAUsarPanelHihi.pdb
+C:\Users\Beatriz\source\repos\AprendendoAUsarPanelHihi\AprendendoAUsarPanelHihi\obj\Debug\AprendendoAUsarPanelHihi.frmCadastrar.resources
