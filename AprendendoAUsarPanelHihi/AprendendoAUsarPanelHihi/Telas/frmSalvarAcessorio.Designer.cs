@@ -110,6 +110,7 @@
             this.btnSalvar.Size = new System.Drawing.Size(78, 75);
             this.btnSalvar.TabIndex = 26;
             this.btnSalvar.TabStop = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // frmSalvarAcessorio
             // 

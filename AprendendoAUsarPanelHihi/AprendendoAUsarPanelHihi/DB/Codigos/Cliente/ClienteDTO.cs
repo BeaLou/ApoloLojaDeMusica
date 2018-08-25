@@ -13,7 +13,7 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Cliente
         public string Sobrenome { get; set; }
         public string CPF { get; set; }
         public string CEP { get; set; }
-        public string Casa { get; set; }
+        public string NumeroCasa { get; set; }
         public string Complemento { get; set; }
         public string Email { get; set; }
         public string Usuario { get; set; }

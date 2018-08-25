@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AprendendoAUsarPanelHihi.DB.Codigos.Pedido;
+using AprendendoAUsarPanelHihi.DB.Codigos.Instrumento;
 
 namespace AprendendoAUsarPanelHihi.Telas
 {
@@ -29,6 +31,16 @@ namespace AprendendoAUsarPanelHihi.Telas
 
         private void label2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            PedidoDTO dto = new PedidoDTO();
+            dto.DataVenda = DateTime.Now;
+            
+
+            InstrumentoDTO instru = cmbinstrumento.SelectedItem as InstrumentoDTO;
 
         }
     }

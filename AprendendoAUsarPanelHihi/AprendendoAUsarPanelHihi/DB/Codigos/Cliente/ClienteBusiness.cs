@@ -29,6 +29,12 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Cliente
         {
             return db.Consultar(cliente);
         }
+        public bool Logar(string usuario, string senha)
+        {
+            bool logou = db.Logar(usuario, senha);
+            return logou;
+        }
+
 
     }
 }

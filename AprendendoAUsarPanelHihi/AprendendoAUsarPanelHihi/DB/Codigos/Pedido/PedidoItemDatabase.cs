@@ -75,7 +75,7 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Pedido
                 WHERE id_instrumento like @id_instrumento
                 WHERE id_acessorio like @id_acessorio";
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("", "%" +   + "%"));
+            parms.Add(new MySqlParameter("", "%" + instrumento  + "%"));
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);

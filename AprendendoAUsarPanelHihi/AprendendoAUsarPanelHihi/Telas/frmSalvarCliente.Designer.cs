@@ -38,7 +38,7 @@
             this.lblCep = new System.Windows.Forms.Label();
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.lblComp = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtncasa = new System.Windows.Forms.TextBox();
             this.lblNmrCasa = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
@@ -136,22 +136,22 @@
             this.lblComp.TabIndex = 8;
             this.lblComp.Text = "Complemento:";
             // 
-            // textBox3
+            // txtncasa
             // 
-            this.textBox3.Location = new System.Drawing.Point(204, 331);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(184, 20);
-            this.textBox3.TabIndex = 11;
+            this.txtncasa.Location = new System.Drawing.Point(204, 331);
+            this.txtncasa.Name = "txtncasa";
+            this.txtncasa.Size = new System.Drawing.Size(184, 20);
+            this.txtncasa.TabIndex = 11;
             // 
             // lblNmrCasa
             // 
             this.lblNmrCasa.AutoSize = true;
             this.lblNmrCasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNmrCasa.Location = new System.Drawing.Point(143, 318);
+            this.lblNmrCasa.Location = new System.Drawing.Point(32, 318);
             this.lblNmrCasa.Name = "lblNmrCasa";
-            this.lblNmrCasa.Size = new System.Drawing.Size(55, 33);
+            this.lblNmrCasa.Size = new System.Drawing.Size(165, 33);
             this.lblNmrCasa.TabIndex = 10;
-            this.lblNmrCasa.Text = "Nº:";
+            this.lblNmrCasa.Text = "Nº da casa:";
             // 
             // txtSenha
             // 
@@ -238,7 +238,7 @@
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtncasa);
             this.Controls.Add(this.lblNmrCasa);
             this.Controls.Add(this.txtComplemento);
             this.Controls.Add(this.lblComp);
@@ -271,7 +271,7 @@
         private System.Windows.Forms.Label lblCep;
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label lblComp;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtncasa;
         private System.Windows.Forms.Label lblNmrCasa;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label lblSenha;

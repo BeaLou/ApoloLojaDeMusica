@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AprendendoAUsarPanelHihi.DB.Codigos.Instrumento;
 using AprendendoAUsarPanelHihi.DB.Codigos.Cliente;
+using AprendendoAUsarPanelHihi.DB.Codigos.Pedido;
 
 namespace AprendendoAUsarPanelHihi.Telas
 {
@@ -37,13 +38,18 @@ namespace AprendendoAUsarPanelHihi.Telas
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+          
+
             CategoriaDTO cat = cboCategoria.SelectedItem as CategoriaDTO;
 
             InstrumentoDTO inst = new InstrumentoDTO();
-            inst.Nome = "";
-            inst.Preco = 0;
+            inst.Nome = txtInstrumento.Text;
+            inst.Preco = Convert.ToDecimal(txtprecoI.Text);
             inst.CategoriaId = cat.Id;
 
+            InstrumentoBusiness business = new InstrumentoBusiness();
+            business.Salvar(inst);
+            MessageBox.Show("Instrumento salvo com sucesso");
             
         }
     }

@@ -44,7 +44,7 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Cliente
             parms.Add(new MySqlParameter("ds_CEP", cliente.CEP));
             parms.Add(new MySqlParameter("nm_usuario", cliente.Usuario));
             parms.Add(new MySqlParameter("ds_senha", cliente.Senha));
-            parms.Add(new MySqlParameter("nr_casa", cliente.Casa));
+            parms.Add(new MySqlParameter("nr_casa", cliente.NumeroCasa));
             parms.Add(new MySqlParameter("ds_complemento", cliente.Complemento));
             parms.Add(new MySqlParameter("ds_email", cliente.Email));
 
@@ -86,7 +86,7 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Cliente
                 novo.CEP = reader.GetString("ds_CEP");
                 novo.Usuario = reader.GetString("nm_usuario");
                 novo.Senha = reader.GetString("ds_senha");
-                novo.Casa = reader.GetString("nr_casa");
+                novo.NumeroCasa = reader.GetString("nr_casa");
                 novo.Complemento = reader.GetString("ds_complemento");
                 novo.Email = reader.GetString("ds_email");
                 novocliente.Add(novo);
@@ -118,7 +118,7 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Cliente
             parms.Add(new MySqlParameter("ds_CPF", cliente.CPF));
             parms.Add(new MySqlParameter("nm_usuario", cliente.Usuario));
             parms.Add(new MySqlParameter("ds_senha", cliente.Senha));
-            parms.Add(new MySqlParameter("nr_casa", cliente.Casa));
+            parms.Add(new MySqlParameter("nr_casa", cliente.NumeroCasa));
             parms.Add(new MySqlParameter("ds_complemento", cliente.Complemento));
             parms.Add(new MySqlParameter("ds_email", cliente.Email));
             Database db = new Database();
@@ -134,6 +134,32 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Cliente
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
+        }
+
+        public bool Logar(string usuario, string senha)
+        {
+            string script = 
+            @"select *
+                FROM tb_cliente
+                WHERE nm_usuario = @nm_usuario
+                and ds_senha = @ds_senha";
+            List<MySqlParameter> parametros = new List<MySqlParameter>();
+            parametros.Add(new MySqlParameter("nm_usuario", usuario));
+            parametros.Add(new MySqlParameter("ds_senha", senha));
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parametros);
+            if (reader.Read())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
+
         }
     }
 }

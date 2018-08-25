@@ -50,7 +50,7 @@
             // 
             this.lblInstrumento.AutoSize = true;
             this.lblInstrumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstrumento.Location = new System.Drawing.Point(111, 173);
+            this.lblInstrumento.Location = new System.Drawing.Point(106, 173);
             this.lblInstrumento.Name = "lblInstrumento";
             this.lblInstrumento.Size = new System.Drawing.Size(177, 33);
             this.lblInstrumento.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             this.lblPrecoI.AutoSize = true;
             this.lblPrecoI.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecoI.Location = new System.Drawing.Point(175, 232);
+            this.lblPrecoI.Location = new System.Drawing.Point(184, 232);
             this.lblPrecoI.Name = "lblPrecoI";
             this.lblPrecoI.Size = new System.Drawing.Size(99, 33);
             this.lblPrecoI.TabIndex = 4;
@@ -78,7 +78,7 @@
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(138, 293);
+            this.lblCategoria.Location = new System.Drawing.Point(134, 294);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(149, 33);
             this.lblCategoria.TabIndex = 6;

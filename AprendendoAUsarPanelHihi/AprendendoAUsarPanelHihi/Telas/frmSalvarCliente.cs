@@ -26,6 +26,26 @@ namespace AprendendoAUsarPanelHihi
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ClienteDTO dto = new ClienteDTO();
+            dto.Nome = txtNome.Text;
+            dto.Sobrenome = txtSobrenome.Text;
+            dto.CEP = txtCep.Text;
+            dto.CPF = txtCpf.Text;
+            dto.NumeroCasa = txtncasa.Text;
+            dto.Complemento = txtComplemento.Text;
+            dto.Email = txtEmail.Text;
+            dto.Usuario = txtUser.Text;
+            dto.Senha = txtSenha.Text;
+
+            ClienteBusiness business = new ClienteBusiness();
+            business.Salvar(dto);
+
+            MessageBox.Show("Cadastro Feito com sucesso!");
+
+
+
+
+
+
         }
     }
 }

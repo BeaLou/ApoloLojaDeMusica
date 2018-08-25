@@ -16,18 +16,21 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Acessorio
                 @"INSERT INTO tb_acessorio
                   ( 
                     nm_acessorio,
-                    vl_acessorio
+                    vl_acessorio,
+                    id_categoria
                   )
 
                   VALUES
                   (
                     @nm_acessorio,
-                    @vl_acessorio
+                    @vl_acessorio,
+                    @id_categoria
                    )";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_acessorio", acessorio.Nome));
             parms.Add(new MySqlParameter("vl_acessorio", acessorio.Preco));
+            parms.Add(new MySqlParameter("id_categoria", acessorio.CategoriaId));
 
             Database db = new Database();
             int pk = db.ExecuteInsertScriptWithPk(script, parms);
@@ -38,12 +41,13 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Acessorio
         {
             string script = @"UPDATE tb_acessorio
                            SET nm_acessorio = @nm_acessorio
-                                vl_acessorio=@vl_acessorio";
+                                vl_acessorio=@vl_acessorio
+                                 id_categoria= @id_categoria";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_acessorio", acessorio.Nome));
             parms.Add(new MySqlParameter("vl_acessorio", acessorio.Preco));
-
+            parms.Add(new MySqlParameter("id_categoria", acessorio.CategoriaId));
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
         }
@@ -82,6 +86,7 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Acessorio
                 novoacessorio.Id = reader.GetInt32("id_acessorio");
                 novoacessorio.Nome = reader.GetString("nm_acessorio");
                 novoacessorio.Preco = reader.GetDecimal("vl_acessorio");
+                novoacessorio.CategoriaId = reader.GetInt32("id_categoria");
 
                 acessorios.Add(novoacessorio);
             }
