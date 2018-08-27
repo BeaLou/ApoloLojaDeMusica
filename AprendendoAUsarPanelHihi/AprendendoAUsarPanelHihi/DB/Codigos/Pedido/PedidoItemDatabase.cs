@@ -10,25 +10,49 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Pedido
 {
    public class PedidoItemDatabase
     {
-        public int Salvar(PedidoItemDTO pedidoitem)
+        public int SalvarAcessorio(PedidoItemDTO pedidoitem)
         {
             string script =
             @"INSERT INTO tb_pedidoitem
                 (
                     id_pedido,
-                    id_instrumento,
+                    
                     id_acessorio
                 )  
                 VALUES
                 (
                    @id_pedido,
-                   @id_instrumento,
+                   
                    @id_acessorio
                   )";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_pedido",pedidoitem.id_pedido));
-            parms.Add(new MySqlParameter("id_instrumento", pedidoitem.id_instrumento));
+            
             parms.Add(new MySqlParameter("id_acessorio", pedidoitem.id_acessorio));
+
+            Database db = new Database();
+            int pk = db.ExecuteInsertScriptWithPk(script, parms);
+            return pk;
+        }
+        public int SalvarInstrumento(PedidoItemDTO pedidoitem)
+        {
+            string script =
+            @"INSERT INTO tb_pedidoitem
+                (
+                    id_pedido,
+                    id_instrumento
+                    
+                )  
+                VALUES
+                (
+                   @id_pedido,
+                   @id_instrumento
+                   
+                  )";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("id_pedido", pedidoitem.id_pedido));
+            parms.Add(new MySqlParameter("id_instrumento", pedidoitem.id_instrumento));
+          
 
             Database db = new Database();
             int pk = db.ExecuteInsertScriptWithPk(script, parms);

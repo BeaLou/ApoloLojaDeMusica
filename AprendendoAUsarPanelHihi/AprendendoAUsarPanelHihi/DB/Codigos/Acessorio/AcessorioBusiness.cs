@@ -32,5 +32,10 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Acessorio
         {
             return db.Consultar(acessorio);
         }
+
+        public List<AcessorioDTO> Listar()
+        {
+            return db.Listar();
+        }
     }
 }

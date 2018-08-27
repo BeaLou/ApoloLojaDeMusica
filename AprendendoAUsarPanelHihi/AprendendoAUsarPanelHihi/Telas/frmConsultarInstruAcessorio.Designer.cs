@@ -35,6 +35,8 @@
             this.dgvBuscarAeI = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarAeI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.SuspendLayout();
@@ -79,11 +81,18 @@
             // 
             // dgvBuscarAeI
             // 
+            this.dgvBuscarAeI.AllowUserToAddRows = false;
+            this.dgvBuscarAeI.AllowUserToDeleteRows = false;
             this.dgvBuscarAeI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBuscarAeI.Location = new System.Drawing.Point(27, 201);
+            this.dgvBuscarAeI.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
+            this.dgvBuscarAeI.Location = new System.Drawing.Point(32, 201);
             this.dgvBuscarAeI.Name = "dgvBuscarAeI";
+            this.dgvBuscarAeI.ReadOnly = true;
             this.dgvBuscarAeI.Size = new System.Drawing.Size(599, 239);
             this.dgvBuscarAeI.TabIndex = 6;
+            this.dgvBuscarAeI.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBuscarAeI_CellContentClick);
             // 
             // lblTitulo
             // 
@@ -105,6 +114,22 @@
             this.btnBuscar.Size = new System.Drawing.Size(78, 75);
             this.btnBuscar.TabIndex = 30;
             this.btnBuscar.TabStop = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "Nome";
+            this.Column1.HeaderText = "Nome";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Preco";
+            this.Column2.HeaderText = "Preco";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // frmConsultarInstruAcessorio
             // 
@@ -136,5 +161,7 @@
         private System.Windows.Forms.DataGridView dgvBuscarAeI;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.PictureBox btnBuscar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

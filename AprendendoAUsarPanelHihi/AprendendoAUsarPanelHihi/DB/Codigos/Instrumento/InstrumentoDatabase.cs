@@ -66,37 +66,63 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Instrumento
     }
 
 
-    public List<InstrumentoDTO> Consultar(string instrumento)
-    {
-        string script =
-            @"SELECT *
-                FROM tb_instrumento
-                WHERE nm_instrumento like @nm_instrumento
-                WHERE vl_preco like @vl_preco
-                WHERE id_categoria like @id_categoria";
-        List<MySqlParameter> parms = new List<MySqlParameter>();
-        parms.Add(new MySqlParameter("nm_instrumento", "%" + instrumento + "%"));
-
-        Database db = new Database();
-        MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-
-        List<InstrumentoDTO> instrumentos = new List<InstrumentoDTO>();
-
-        while (reader.Read())
+        public List<InstrumentoDTO> Consultar(string instrumento)
         {
-            InstrumentoDTO novoinstrumento = new InstrumentoDTO();
-            novoinstrumento.Id = reader.GetInt32("id_instrumento");
-            novoinstrumento.Nome = reader.GetString("nm_instrumento");
-            novoinstrumento.Preco = reader.GetDecimal("vl_preco");
-            novoinstrumento.CategoriaId = reader.GetInt32("id_categoria");
+            string script =
+                @"SELECT *
+                FROM tb_instrumento
+                WHERE nm_instrumento like @nm_instrumento";
 
-            instrumentos.Add(novoinstrumento);
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("nm_instrumento", "%" + instrumento + "%"));
 
-        }
-        reader.Close();
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
-        return instrumentos;
+            List<InstrumentoDTO> instrumentos = new List<InstrumentoDTO>();
 
+            while (reader.Read())
+            {
+                InstrumentoDTO novoinstrumento = new InstrumentoDTO();
+                novoinstrumento.Id = reader.GetInt32("id_instrumento");
+                novoinstrumento.Nome = reader.GetString("nm_instrumento");
+                novoinstrumento.Preco = reader.GetDecimal("vl_instrumento");
+                novoinstrumento.CategoriaId = reader.GetInt32("id_categoria");
+
+                instrumentos.Add(novoinstrumento);
+
+            }
+            reader.Close();
+
+            return instrumentos;
     }
+             public List<InstrumentoDTO> Listar()
+        {
+            string script =
+                @"select *
+                FROM tb_instrumento";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+
+            List<InstrumentoDTO> lista = new List<InstrumentoDTO>();
+
+            while (reader.Read())
+            {
+                InstrumentoDTO cat = new InstrumentoDTO();
+                cat.Id = reader.GetInt32("id_instrumento");
+                cat.Nome = reader.GetString("nm_instrumento");
+                cat.CategoriaId = reader.GetInt32("id_categoria");
+                cat.Preco = reader.GetDecimal("vl_instrumento");
+
+
+                lista.Add(cat);
+
+            }
+            reader.Close();
+            return lista;
+        }
 }
 }

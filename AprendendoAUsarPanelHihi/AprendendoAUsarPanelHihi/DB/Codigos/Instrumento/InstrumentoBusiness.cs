@@ -27,6 +27,10 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Instrumento
         {
             return db.Consultar(instrumento);
         }
+        public List<InstrumentoDTO> Listar()
+        {
+            return db.Listar();
+        }
 
     }
 }

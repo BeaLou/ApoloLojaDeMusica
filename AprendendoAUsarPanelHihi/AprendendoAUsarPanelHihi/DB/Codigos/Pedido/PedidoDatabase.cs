@@ -23,7 +23,7 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Pedido
                 (
                    @id_cliente,
                    @dt_venda,
-                   @ds_formapamento
+                   @ds_formapagamento
                   )";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();

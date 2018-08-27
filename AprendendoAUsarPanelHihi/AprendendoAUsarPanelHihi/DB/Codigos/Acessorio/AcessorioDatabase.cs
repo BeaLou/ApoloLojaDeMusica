@@ -95,5 +95,33 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Acessorio
             return acessorios;
 
         }
+        public List<AcessorioDTO> Listar()
+        {
+            string script =
+                @"select *
+                FROM tb_acessorio";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+
+            List<AcessorioDTO> lista = new List<AcessorioDTO>();
+
+            while (reader.Read())
+            {
+                AcessorioDTO cat = new AcessorioDTO();
+                cat.Id = reader.GetInt32("id_acessorio");
+                cat.Nome = reader.GetString("nm_acessorio");
+                cat.CategoriaId = reader.GetInt32("id_categoria");
+                cat.Preco = reader.GetDecimal("vl_acessorio");
+
+
+                lista.Add(cat);
+
+            }
+            reader.Close();
+            return lista;
+        }
     }
 }

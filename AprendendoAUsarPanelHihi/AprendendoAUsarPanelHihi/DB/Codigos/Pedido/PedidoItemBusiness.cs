@@ -9,10 +9,16 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Pedido
     class PedidoItemBusiness
     {
         PedidoItemDatabase db = new PedidoItemDatabase();
-        public int Salvar(PedidoItemDTO pedidoitem)
+      public int SalvarInstrumento(PedidoItemDTO pedidoitem)
         {
-            return db.Salvar(pedidoitem);
+            return db.SalvarInstrumento(pedidoitem);
         }
+        public int SalvarAcessorio(PedidoItemDTO pedidoitem)
+        {
+            return db.SalvarAcessorio(pedidoitem);
+        }
+
+
         public void Alterar(PedidoItemDTO pedidoitem)
         {
             db.Alterar(pedidoitem);
