@@ -95,6 +95,12 @@
     <Compile Include="Telas\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\frmlogininicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmlogininicial.Designer.cs">
+      <DependentUpon>frmlogininicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmSalvarCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmlogininicial.resx">
+      <DependentUpon>frmlogininicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmSalvarAcessorio.resx">
       <DependentUpon>frmSalvarAcessorio.cs</DependentUpon>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AprendendoAUsarPanelHihi.Telas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,7 @@ namespace AprendendoAUsarPanelHihi
                 Invoke(new Action(() =>
                 {
                     // Abre a tela Inicial
-                    ApoloStore frm = new ApoloStore();
+                    frmlogininicial frm = new frmlogininicial();
                     frm.Show();
                     Hide();
                 }));
