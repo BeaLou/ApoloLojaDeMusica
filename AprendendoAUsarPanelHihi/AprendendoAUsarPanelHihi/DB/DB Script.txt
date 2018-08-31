@@ -7,8 +7,8 @@ CREATE TABLE `tb_cliente` (
 	`id_cliente` int NOT NULL AUTO_INCREMENT,
 	`nm_cliente` varchar(50) ,
 	`nm_sobrenome` varchar(50) ,
-	`ds_cpf` char(11) ,
-	`ds_cep` char(8) ,
+	`ds_cpf` char(20) ,
+	`ds_cep` char(20) ,
 	`nm_usuario` varchar(100) ,
 	`ds_senha` varchar(100) ,
 	`nr_casa` varchar(100) ,
@@ -36,8 +36,8 @@ CREATE TABLE `tb_categoria` (
 CREATE TABLE `tb_pedidoitem` (
 	`id_pedidoitem` int NOT NULL AUTO_INCREMENT,
 	`id_pedido` int NOT NULL,
-	`id_instrumento` int NOT NULL,
-	`id_acessorio` int NOT NULL,
+	`id_instrumento` int ,
+	`id_acessorio` int ,
 	PRIMARY KEY (`id_pedidoitem`)
 );
 
@@ -81,13 +81,13 @@ create view vw_pedido_consultar as
          tb_pedido.ds_formapagamento,
          tb_cliente.nm_cliente,
          count(tb_pedidoitem.id_pedidoitem)  as qtd_items,
-         sum(tb_instrumento.vl_instrumento + tb_acessorio.vl_acessorio) as vl_total
+         sum(ifnull(tb_instrumento.vl_instrumento,0) + ifnull(tb_acessorio.vl_acessorio,0)) as vl_total
          from tb_pedido
          join tb_pedidoitem
          on tb_pedido.id_pedido = tb_pedidoitem.id_pedido
-         join tb_instrumento
+         left join tb_instrumento
          on tb_pedidoitem.id_instrumento = tb_instrumento.id_instrumento
-         join tb_acessorio
+         left join tb_acessorio
 		 on tb_pedidoitem.id_acessorio = tb_acessorio.id_acessorio
          join tb_cliente
          on tb_pedido.id_cliente = tb_cliente.id_cliente
@@ -96,3 +96,11 @@ create view vw_pedido_consultar as
 		 tb_pedido.dt_venda,
          tb_pedido.ds_formapagamento,
          tb_cliente.nm_cliente;
+         
+         
+
+select * from tb_instrumento;     
+select * from tb_acessorio;
+select * from tb_pedido;
+select * from tb_pedidoitem;
+select * from tb_cliente;
