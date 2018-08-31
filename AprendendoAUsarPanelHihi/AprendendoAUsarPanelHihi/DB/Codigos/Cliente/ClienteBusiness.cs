@@ -29,10 +29,17 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Cliente
         {
             return db.Consultar(cliente);
         }
-        public bool Logar(string usuario, string senha)
+        public ClienteDTO Logar(string usuario, string senha)
         {
-            bool logou = db.Logar(usuario, senha);
-            return logou;
+            if (usuario == string.Empty)
+            {
+                throw new ArgumentException("Usuário é obrigatório");
+            }
+            if (senha == string.Empty)
+            {
+                throw new ArgumentException("Senha é obrigatória");
+            }
+            return db.Logar(usuario, senha);
         }
 
 

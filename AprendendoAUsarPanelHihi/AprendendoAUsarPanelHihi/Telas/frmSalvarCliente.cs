@@ -13,6 +13,8 @@ namespace AprendendoAUsarPanelHihi
 {
     public partial class frmCadastrar : UserControl
     {
+        Validação v = new Validação();
+
         public frmCadastrar()
         {
             InitializeComponent();
@@ -28,8 +30,8 @@ namespace AprendendoAUsarPanelHihi
             ClienteDTO dto = new ClienteDTO();
             dto.Nome = txtNome.Text;
             dto.Sobrenome = txtSobrenome.Text;
-            dto.CEP = txtCep.Text;
-            dto.CPF = txtCpf.Text;
+            dto.CEP = mtbcep.Text;
+            dto.CPF = mtbcpf.Text;
             dto.NumeroCasa = txtncasa.Text;
             dto.Complemento = txtComplemento.Text;
             dto.Email = txtEmail.Text;
@@ -46,6 +48,31 @@ namespace AprendendoAUsarPanelHihi
 
 
 
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void txtSobrenome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void mtbcpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void mtbcep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void txtncasa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
         }
     }
 }

@@ -133,6 +133,8 @@
     <Compile Include="Telas\frmSalvarPedido.Designer.cs">
       <DependentUpon>frmSalvarPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserSession.cs" />
+    <Compile Include="Validação.cs" />
     <EmbeddedResource Include="ApoloStore.resx">
       <DependentUpon>ApoloStore.cs</DependentUpon>
     </EmbeddedResource>

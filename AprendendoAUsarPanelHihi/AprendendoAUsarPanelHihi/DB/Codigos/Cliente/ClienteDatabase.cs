@@ -136,7 +136,7 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Cliente
             db.ExecuteInsertScript(script, parms);
         }
 
-        public bool Logar(string usuario, string senha)
+        public ClienteDTO Logar(string usuario, string senha)
         {
             string script = 
             @"select *
@@ -149,14 +149,25 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Cliente
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parametros);
+
+            ClienteDTO cliente = null;
             if (reader.Read())
             {
-                return true;
+               cliente = new ClienteDTO();
+                cliente.Id = reader.GetInt32("id_cliente");
+                cliente.Nome = reader.GetString("nm_cliente");
+                cliente.Sobrenome = reader.GetString("nm_sobrenome");
+                cliente.CPF = reader.GetString("ds_CPF");
+                cliente.CEP = reader.GetString("ds_CEP");
+                cliente.Usuario = reader.GetString("nm_usuario");
+                cliente.Senha = reader.GetString("ds_senha");
+                cliente.NumeroCasa = reader.GetString("nr_casa");
+                cliente.Complemento = reader.GetString("ds_complemento");
+                cliente.Email = reader.GetString("ds_email");
+               
             }
-            else
-            {
-                return false;
-            }
+            reader.Close();
+            return cliente;
 
 
 

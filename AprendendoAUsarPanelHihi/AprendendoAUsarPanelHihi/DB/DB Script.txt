@@ -5,17 +5,19 @@ use ApoloDB;
 
 CREATE TABLE `tb_cliente` (
 	`id_cliente` int NOT NULL AUTO_INCREMENT,
-	`nm_cliente` varchar(50) NOT NULL,
-	`nm_sobrenome` varchar(50) NOT NULL,
-	`ds_cpf` char(11) NOT NULL,
-	`ds_cep` char(8) NOT NULL,
-	`nm_usuario` varchar(100) NOT NULL,
-	`ds_senha` varchar(100) NOT NULL,
-	`nr_casa` varchar(100) NOT NULL,
-	`ds_complemento` varchar(100) NOT NULL,
-	`ds_email` varchar(100) NOT NULL,
+	`nm_cliente` varchar(50) ,
+	`nm_sobrenome` varchar(50) ,
+	`ds_cpf` char(11) ,
+	`ds_cep` char(8) ,
+	`nm_usuario` varchar(100) ,
+	`ds_senha` varchar(100) ,
+	`nr_casa` varchar(100) ,
+	`ds_complemento` varchar(100) ,
+	`ds_email` varchar(100) ,
 	PRIMARY KEY (`id_cliente`)
 );
+insert into tb_cliente(nm_cliente, nm_sobrenome, ds_cpf, ds_cep, nm_usuario, ds_senha, nr_casa, ds_complemento, ds_email)values("adm","1adm","13214123132","13243523","adm","123","123","perto de la","adm@gmail.com");
+
 
 CREATE TABLE `tb_pedido` (
 	`id_pedido` int NOT NULL AUTO_INCREMENT,
@@ -71,6 +73,7 @@ Insert into tb_categoria(nm_categoria)VALUES("Percussão");
 Insert into tb_categoria(nm_categoria)VALUES("Sopro");
 Insert into tb_categoria(nm_categoria)VALUES("Corda");
 Insert into tb_categoria(nm_categoria)VALUES("Eletrônico");
+
 
 create view vw_pedido_consultar as 
   select tb_pedido.id_pedido,

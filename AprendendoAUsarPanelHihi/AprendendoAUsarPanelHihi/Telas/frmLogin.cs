@@ -28,16 +28,8 @@ namespace AprendendoAUsarPanelHihi.Telas
              string usuario = txtUsuario.Text;
             string senha = txtSenha.Text;
 
-            ClienteBusiness business = new ClienteBusiness();
-            bool logou = business.Logar(usuario, senha);
-            if(logou == true)
-            {
-                MessageBox.Show("login efetuado");
-            }
-            else
-            {
-                MessageBox.Show("credenciais inválidas");
-            }
+            
+            
 
        
 

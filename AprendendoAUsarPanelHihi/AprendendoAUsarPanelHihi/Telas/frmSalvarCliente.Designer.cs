@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.lblSobrenome = new System.Windows.Forms.Label();
-            this.txtCpf = new System.Windows.Forms.TextBox();
             this.lblCpf = new System.Windows.Forms.Label();
-            this.txtCep = new System.Windows.Forms.TextBox();
             this.lblCep = new System.Windows.Forms.Label();
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.lblComp = new System.Windows.Forms.Label();
@@ -48,16 +47,19 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTitulo4 = new System.Windows.Forms.Label();
+            this.mtbcpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtcpf = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mtbcep = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.Location = new System.Drawing.Point(98, 130);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(76, 35);
+            this.lblNome.Size = new System.Drawing.Size(101, 33);
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome:";
             // 
@@ -67,6 +69,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(184, 20);
             this.txtNome.TabIndex = 1;
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // txtSobrenome
             // 
@@ -74,48 +77,35 @@
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(184, 20);
             this.txtSobrenome.TabIndex = 3;
+            this.txtSobrenome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSobrenome_KeyPress);
             // 
             // lblSobrenome
             // 
             this.lblSobrenome.AutoSize = true;
-            this.lblSobrenome.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSobrenome.Location = new System.Drawing.Point(26, 175);
             this.lblSobrenome.Name = "lblSobrenome";
-            this.lblSobrenome.Size = new System.Drawing.Size(123, 35);
+            this.lblSobrenome.Size = new System.Drawing.Size(173, 33);
             this.lblSobrenome.TabIndex = 2;
             this.lblSobrenome.Text = "Sobrenome:";
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Location = new System.Drawing.Point(204, 237);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(184, 20);
-            this.txtCpf.TabIndex = 5;
             // 
             // lblCpf
             // 
             this.lblCpf.AutoSize = true;
-            this.lblCpf.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCpf.Location = new System.Drawing.Point(116, 224);
             this.lblCpf.Name = "lblCpf";
-            this.lblCpf.Size = new System.Drawing.Size(75, 35);
+            this.lblCpf.Size = new System.Drawing.Size(81, 33);
             this.lblCpf.TabIndex = 4;
             this.lblCpf.Text = "CPF:";
-            // 
-            // txtCep
-            // 
-            this.txtCep.Location = new System.Drawing.Point(204, 287);
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(184, 20);
-            this.txtCep.TabIndex = 7;
             // 
             // lblCep
             // 
             this.lblCep.AutoSize = true;
-            this.lblCep.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCep.Location = new System.Drawing.Point(116, 274);
             this.lblCep.Name = "lblCep";
-            this.lblCep.Size = new System.Drawing.Size(73, 35);
+            this.lblCep.Size = new System.Drawing.Size(82, 33);
             this.lblCep.TabIndex = 6;
             this.lblCep.Text = "CEP:";
             // 
@@ -129,10 +119,10 @@
             // lblComp
             // 
             this.lblComp.AutoSize = true;
-            this.lblComp.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComp.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComp.Location = new System.Drawing.Point(-6, 362);
             this.lblComp.Name = "lblComp";
-            this.lblComp.Size = new System.Drawing.Size(148, 35);
+            this.lblComp.Size = new System.Drawing.Size(205, 33);
             this.lblComp.TabIndex = 8;
             this.lblComp.Text = "Complemento:";
             // 
@@ -142,14 +132,15 @@
             this.txtncasa.Name = "txtncasa";
             this.txtncasa.Size = new System.Drawing.Size(184, 20);
             this.txtncasa.TabIndex = 11;
+            this.txtncasa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtncasa_KeyPress);
             // 
             // lblNmrCasa
             // 
             this.lblNmrCasa.AutoSize = true;
-            this.lblNmrCasa.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNmrCasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNmrCasa.Location = new System.Drawing.Point(32, 318);
             this.lblNmrCasa.Name = "lblNmrCasa";
-            this.lblNmrCasa.Size = new System.Drawing.Size(122, 35);
+            this.lblNmrCasa.Size = new System.Drawing.Size(165, 33);
             this.lblNmrCasa.TabIndex = 10;
             this.lblNmrCasa.Text = "Nº da casa:";
             // 
@@ -163,10 +154,10 @@
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.Location = new System.Drawing.Point(421, 224);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(82, 35);
+            this.lblSenha.Size = new System.Drawing.Size(106, 33);
             this.lblSenha.TabIndex = 16;
             this.lblSenha.Text = "Senha:";
             // 
@@ -180,10 +171,10 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(430, 176);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(79, 35);
+            this.lblEmail.Size = new System.Drawing.Size(97, 33);
             this.lblEmail.TabIndex = 14;
             this.lblEmail.Text = "Email:";
             // 
@@ -197,10 +188,10 @@
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.Location = new System.Drawing.Point(403, 130);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(97, 35);
+            this.lblUser.Size = new System.Drawing.Size(124, 33);
             this.lblUser.TabIndex = 12;
             this.lblUser.Text = "Usuário:";
             // 
@@ -218,18 +209,43 @@
             // lblTitulo4
             // 
             this.lblTitulo4.AutoSize = true;
-            this.lblTitulo4.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo4.Location = new System.Drawing.Point(258, 53);
             this.lblTitulo4.Name = "lblTitulo4";
-            this.lblTitulo4.Size = new System.Drawing.Size(233, 35);
+            this.lblTitulo4.Size = new System.Drawing.Size(315, 33);
             this.lblTitulo4.TabIndex = 21;
             this.lblTitulo4.Text = "Cadastrar novo cliente:";
+            // 
+            // mtbcpf
+            // 
+            this.mtbcpf.Location = new System.Drawing.Point(204, 237);
+            this.mtbcpf.Mask = "000,000,000-00";
+            this.mtbcpf.Name = "mtbcpf";
+            this.mtbcpf.Size = new System.Drawing.Size(184, 20);
+            this.mtbcpf.TabIndex = 22;
+            this.mtbcpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbcpf_KeyPress);
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(61, 4);
+            // 
+            // mtbcep
+            // 
+            this.mtbcep.Location = new System.Drawing.Point(204, 286);
+            this.mtbcep.Mask = "0000000-000";
+            this.mtbcep.Name = "mtbcep";
+            this.mtbcep.Size = new System.Drawing.Size(184, 20);
+            this.mtbcep.TabIndex = 24;
+            this.mtbcep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbcep_KeyPress);
             // 
             // frmCadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.mtbcep);
+            this.Controls.Add(this.mtbcpf);
             this.Controls.Add(this.lblTitulo4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtSenha);
@@ -242,9 +258,7 @@
             this.Controls.Add(this.lblNmrCasa);
             this.Controls.Add(this.txtComplemento);
             this.Controls.Add(this.lblComp);
-            this.Controls.Add(this.txtCep);
             this.Controls.Add(this.lblCep);
-            this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.lblCpf);
             this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.lblSobrenome);
@@ -265,9 +279,7 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.Label lblSobrenome;
-        private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.Label lblCpf;
-        private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.Label lblCep;
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label lblComp;
@@ -281,5 +293,8 @@
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTitulo4;
+        private System.Windows.Forms.MaskedTextBox mtbcpf;
+        private System.Windows.Forms.ContextMenuStrip txtcpf;
+        private System.Windows.Forms.MaskedTextBox mtbcep;
     }
 }

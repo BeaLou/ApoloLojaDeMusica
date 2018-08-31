@@ -11,11 +11,13 @@ using System.Windows.Forms;
 using AprendendoAUsarPanelHihi.DB.Codigos.Pedido;
 using AprendendoAUsarPanelHihi.DB.Codigos.Instrumento;
 using AprendendoAUsarPanelHihi.DB.Codigos.Acessorio;
+using AprendendoAUsarPanelHihi.DB.Codigos.Cliente;
 
 namespace AprendendoAUsarPanelHihi.Telas
 {
     public partial class frmSalvarPedido : UserControl
     {
+        Validação v = new Validação();
         public frmSalvarPedido()
         {
             InitializeComponent();
@@ -68,6 +70,7 @@ namespace AprendendoAUsarPanelHihi.Telas
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
             PedidoDTO dto = new PedidoDTO();
             dto.DataVenda = DateTime.Now;
             dto.TipoPagto = cboPagto.Text;
@@ -110,6 +113,22 @@ namespace AprendendoAUsarPanelHihi.Telas
             {
                 acessorio.Add(acessp);
             }
+        }
+
+        private void txtnmcliente_TextChanged(object sender, EventArgs e)
+        {
+            
+           
+        }
+
+        private void txtquantidade_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void txtquantidadeA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
         }
     }
 }

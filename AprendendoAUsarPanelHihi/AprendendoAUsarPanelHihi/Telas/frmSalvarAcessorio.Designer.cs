@@ -41,6 +41,7 @@
             // 
             // cboCategoria
             // 
+            this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoria.FormattingEnabled = true;
             this.cboCategoria.Location = new System.Drawing.Point(263, 294);
             this.cboCategoria.Name = "cboCategoria";
@@ -50,10 +51,10 @@
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.Location = new System.Drawing.Point(108, 282);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(113, 35);
+            this.lblCategoria.Size = new System.Drawing.Size(149, 33);
             this.lblCategoria.TabIndex = 24;
             this.lblCategoria.Text = "Categoria:";
             // 
@@ -63,14 +64,15 @@
             this.txtPrecoA.Name = "txtPrecoA";
             this.txtPrecoA.Size = new System.Drawing.Size(301, 20);
             this.txtPrecoA.TabIndex = 23;
+            this.txtPrecoA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecoA_KeyPress);
             // 
             // lblPrecoA
             // 
             this.lblPrecoA.AutoSize = true;
-            this.lblPrecoA.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecoA.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecoA.Location = new System.Drawing.Point(158, 222);
             this.lblPrecoA.Name = "lblPrecoA";
-            this.lblPrecoA.Size = new System.Drawing.Size(74, 35);
+            this.lblPrecoA.Size = new System.Drawing.Size(99, 33);
             this.lblPrecoA.TabIndex = 22;
             this.lblPrecoA.Text = "Preço:";
             // 
@@ -80,24 +82,26 @@
             this.txtAcessorio.Name = "txtAcessorio";
             this.txtAcessorio.Size = new System.Drawing.Size(301, 20);
             this.txtAcessorio.TabIndex = 21;
+            this.txtAcessorio.TextChanged += new System.EventHandler(this.txtAcessorio_TextChanged);
+            this.txtAcessorio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAcessorio_KeyPress);
             // 
             // lblAcessorio
             // 
             this.lblAcessorio.AutoSize = true;
-            this.lblAcessorio.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcessorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAcessorio.Location = new System.Drawing.Point(105, 163);
             this.lblAcessorio.Name = "lblAcessorio";
-            this.lblAcessorio.Size = new System.Drawing.Size(111, 35);
+            this.lblAcessorio.Size = new System.Drawing.Size(152, 33);
             this.lblAcessorio.TabIndex = 20;
             this.lblAcessorio.Text = "Acessório:";
             // 
             // lblTitulo3
             // 
             this.lblTitulo3.AutoSize = true;
-            this.lblTitulo3.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo3.Location = new System.Drawing.Point(263, 84);
             this.lblTitulo3.Name = "lblTitulo3";
-            this.lblTitulo3.Size = new System.Drawing.Size(251, 35);
+            this.lblTitulo3.Size = new System.Drawing.Size(356, 33);
             this.lblTitulo3.TabIndex = 27;
             this.lblTitulo3.Text = "Cadastrar novo acessório:";
             // 

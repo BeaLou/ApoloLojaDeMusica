@@ -14,6 +14,8 @@ namespace AprendendoAUsarPanelHihi.Telas
 {
     public partial class frmSalvarAcessorio : UserControl
     {
+        Validação v = new Validação();
+
         public frmSalvarAcessorio()
         {
             InitializeComponent();
@@ -41,6 +43,21 @@ namespace AprendendoAUsarPanelHihi.Telas
             business.Salvar(acess);
             MessageBox.Show("Acessório salvo com sucesso");
 
+        }
+
+        private void txtAcessorio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAcessorio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void txtPrecoA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
         }
     }
 }

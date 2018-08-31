@@ -15,6 +15,8 @@ namespace AprendendoAUsarPanelHihi.Telas
 {
     public partial class frmSalvarInstrumento : UserControl
     {
+        Validação v = new Validação();
+
         public frmSalvarInstrumento()
         {
             InitializeComponent();
@@ -51,6 +53,16 @@ namespace AprendendoAUsarPanelHihi.Telas
             business.Salvar(inst);
             MessageBox.Show("Instrumento salvo com sucesso");
             
+        }
+
+        private void txtInstrumento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void txtprecoI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
         }
     }
 }

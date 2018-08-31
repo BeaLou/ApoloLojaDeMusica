@@ -14,6 +14,8 @@ namespace AprendendoAUsarPanelHihi.Telas
 {
     public partial class frmConsultarInstruAcessorio : UserControl
     {
+        Validação v = new Validação();
+
         public frmConsultarInstruAcessorio()
         {
             InitializeComponent();
@@ -50,6 +52,11 @@ namespace AprendendoAUsarPanelHihi.Telas
         private void dgvBuscarAeI_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtBusca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
         }
     }
 }

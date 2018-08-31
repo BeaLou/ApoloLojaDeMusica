@@ -20,19 +20,21 @@ namespace AprendendoAUsarPanelHihi.Telas
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            string usuario = txtUsuariolog.Text;
-            string senha = txtSenhalog.Text;
-
             ClienteBusiness business = new ClienteBusiness();
-            bool logou = business.Logar(usuario, senha);
-            if (logou == true)
+            ClienteDTO cliente = business.Logar(txtUsuariolog.Text, txtSenhalog.Text);
+            if(cliente != null)
             {
-                MessageBox.Show("login efetuado");
+                UserSession.Usuariologado = cliente;
+                ApoloStore frm = new ApoloStore();
+                frm.Show();
+                Hide();
             }
             else
             {
-                MessageBox.Show("credenciais inválidas");
+                MessageBox.Show("Credenciais inválidas.");
             }
+           
+
 
 
 
