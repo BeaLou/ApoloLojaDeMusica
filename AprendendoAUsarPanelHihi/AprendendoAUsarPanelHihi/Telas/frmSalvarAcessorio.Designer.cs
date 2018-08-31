@@ -46,7 +46,7 @@
             this.cboCategoria.Location = new System.Drawing.Point(263, 294);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(301, 21);
-            this.cboCategoria.TabIndex = 25;
+            this.cboCategoria.TabIndex = 3;
             // 
             // lblCategoria
             // 
@@ -63,7 +63,7 @@
             this.txtPrecoA.Location = new System.Drawing.Point(263, 235);
             this.txtPrecoA.Name = "txtPrecoA";
             this.txtPrecoA.Size = new System.Drawing.Size(301, 20);
-            this.txtPrecoA.TabIndex = 23;
+            this.txtPrecoA.TabIndex = 2;
             this.txtPrecoA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecoA_KeyPress);
             // 
             // lblPrecoA
@@ -81,7 +81,7 @@
             this.txtAcessorio.Location = new System.Drawing.Point(263, 176);
             this.txtAcessorio.Name = "txtAcessorio";
             this.txtAcessorio.Size = new System.Drawing.Size(301, 20);
-            this.txtAcessorio.TabIndex = 21;
+            this.txtAcessorio.TabIndex = 1;
             this.txtAcessorio.TextChanged += new System.EventHandler(this.txtAcessorio_TextChanged);
             this.txtAcessorio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAcessorio_KeyPress);
             // 

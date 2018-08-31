@@ -46,7 +46,7 @@
             this.txtBusca.Location = new System.Drawing.Point(151, 110);
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(480, 20);
-            this.txtBusca.TabIndex = 3;
+            this.txtBusca.TabIndex = 1;
             this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusca_KeyPress);
             // 
             // lblBuscar
@@ -79,7 +79,7 @@
             this.cboBuscarCategoria.Location = new System.Drawing.Point(151, 153);
             this.cboBuscarCategoria.Name = "cboBuscarCategoria";
             this.cboBuscarCategoria.Size = new System.Drawing.Size(480, 21);
-            this.cboBuscarCategoria.TabIndex = 5;
+            this.cboBuscarCategoria.TabIndex = 2;
             // 
             // dgvBuscarAeI
             // 

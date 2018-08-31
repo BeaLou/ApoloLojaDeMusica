@@ -78,7 +78,7 @@
             this.cmbinstrumento.Location = new System.Drawing.Point(216, 124);
             this.cmbinstrumento.Name = "cmbinstrumento";
             this.cmbinstrumento.Size = new System.Drawing.Size(272, 21);
-            this.cmbinstrumento.TabIndex = 3;
+            this.cmbinstrumento.TabIndex = 1;
             this.cmbinstrumento.SelectedIndexChanged += new System.EventHandler(this.cmbinstrumento_SelectedIndexChanged);
             // 
             // label1
@@ -98,7 +98,7 @@
             this.cmbacessorio.Location = new System.Drawing.Point(216, 284);
             this.cmbacessorio.Name = "cmbacessorio";
             this.cmbacessorio.Size = new System.Drawing.Size(272, 21);
-            this.cmbacessorio.TabIndex = 7;
+            this.cmbacessorio.TabIndex = 3;
             // 
             // label2
             // 
@@ -172,7 +172,7 @@
             this.cboPagto.Location = new System.Drawing.Point(216, 438);
             this.cboPagto.Name = "cboPagto";
             this.cboPagto.Size = new System.Drawing.Size(272, 21);
-            this.cboPagto.TabIndex = 21;
+            this.cboPagto.TabIndex = 5;
             // 
             // label8
             // 
@@ -188,7 +188,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::AprendendoAUsarPanelHihi.Properties.Resources.iconSalvar;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(702, 412);
+            this.pictureBox1.Location = new System.Drawing.Point(702, 423);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(78, 75);
             this.pictureBox1.TabIndex = 19;
@@ -210,7 +210,7 @@
             this.txtnmcliente.Location = new System.Drawing.Point(216, 465);
             this.txtnmcliente.Name = "txtnmcliente";
             this.txtnmcliente.Size = new System.Drawing.Size(272, 20);
-            this.txtnmcliente.TabIndex = 23;
+            this.txtnmcliente.TabIndex = 6;
             this.txtnmcliente.TextChanged += new System.EventHandler(this.txtnmcliente_TextChanged);
             // 
             // txtquantidade
@@ -218,7 +218,7 @@
             this.txtquantidade.Location = new System.Drawing.Point(216, 151);
             this.txtquantidade.Name = "txtquantidade";
             this.txtquantidade.Size = new System.Drawing.Size(272, 20);
-            this.txtquantidade.TabIndex = 24;
+            this.txtquantidade.TabIndex = 2;
             this.txtquantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquantidade_KeyPress);
             // 
             // txtquantidadeA
@@ -226,7 +226,7 @@
             this.txtquantidadeA.Location = new System.Drawing.Point(216, 311);
             this.txtquantidadeA.Name = "txtquantidadeA";
             this.txtquantidadeA.Size = new System.Drawing.Size(272, 20);
-            this.txtquantidadeA.TabIndex = 25;
+            this.txtquantidadeA.TabIndex = 4;
             this.txtquantidadeA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtquantidadeA_KeyPress);
             // 
             // label4

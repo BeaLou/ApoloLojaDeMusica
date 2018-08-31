@@ -76,7 +76,7 @@
             this.txtSobrenome.Location = new System.Drawing.Point(204, 189);
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(184, 20);
-            this.txtSobrenome.TabIndex = 3;
+            this.txtSobrenome.TabIndex = 2;
             this.txtSobrenome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSobrenome_KeyPress);
             // 
             // lblSobrenome
@@ -114,7 +114,7 @@
             this.txtComplemento.Location = new System.Drawing.Point(204, 375);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(184, 20);
-            this.txtComplemento.TabIndex = 9;
+            this.txtComplemento.TabIndex = 6;
             // 
             // lblComp
             // 
@@ -131,7 +131,7 @@
             this.txtncasa.Location = new System.Drawing.Point(204, 331);
             this.txtncasa.Name = "txtncasa";
             this.txtncasa.Size = new System.Drawing.Size(184, 20);
-            this.txtncasa.TabIndex = 11;
+            this.txtncasa.TabIndex = 5;
             this.txtncasa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtncasa_KeyPress);
             // 
             // lblNmrCasa
@@ -149,7 +149,7 @@
             this.txtSenha.Location = new System.Drawing.Point(533, 237);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(184, 20);
-            this.txtSenha.TabIndex = 17;
+            this.txtSenha.TabIndex = 9;
             // 
             // lblSenha
             // 
@@ -166,7 +166,7 @@
             this.txtEmail.Location = new System.Drawing.Point(533, 188);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(184, 20);
-            this.txtEmail.TabIndex = 15;
+            this.txtEmail.TabIndex = 8;
             // 
             // lblEmail
             // 
@@ -183,7 +183,7 @@
             this.txtUser.Location = new System.Drawing.Point(533, 143);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(184, 20);
-            this.txtUser.TabIndex = 13;
+            this.txtUser.TabIndex = 7;
             // 
             // lblUser
             // 
@@ -222,7 +222,7 @@
             this.mtbcpf.Mask = "000,000,000-00";
             this.mtbcpf.Name = "mtbcpf";
             this.mtbcpf.Size = new System.Drawing.Size(184, 20);
-            this.mtbcpf.TabIndex = 22;
+            this.mtbcpf.TabIndex = 3;
             this.mtbcpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbcpf_KeyPress);
             // 
             // txtcpf
@@ -236,7 +236,7 @@
             this.mtbcep.Mask = "0000000-000";
             this.mtbcep.Name = "mtbcep";
             this.mtbcep.Size = new System.Drawing.Size(184, 20);
-            this.mtbcep.TabIndex = 24;
+            this.mtbcep.TabIndex = 4;
             this.mtbcep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbcep_KeyPress);
             // 
             // frmCadastrar

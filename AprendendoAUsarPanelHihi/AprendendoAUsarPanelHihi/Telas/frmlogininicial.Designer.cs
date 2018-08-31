@@ -53,8 +53,9 @@
             // 
             this.txtSenhalog.Location = new System.Drawing.Point(288, 236);
             this.txtSenhalog.Name = "txtSenhalog";
+            this.txtSenhalog.PasswordChar = '*';
             this.txtSenhalog.Size = new System.Drawing.Size(243, 20);
-            this.txtSenhalog.TabIndex = 28;
+            this.txtSenhalog.TabIndex = 2;
             // 
             // lblSenha
             // 
@@ -71,7 +72,7 @@
             this.txtUsuariolog.Location = new System.Drawing.Point(288, 165);
             this.txtUsuariolog.Name = "txtUsuariolog";
             this.txtUsuariolog.Size = new System.Drawing.Size(243, 20);
-            this.txtUsuariolog.TabIndex = 26;
+            this.txtUsuariolog.TabIndex = 1;
             // 
             // lblEmail
             // 
