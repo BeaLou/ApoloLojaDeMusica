@@ -44,6 +44,7 @@
             // txtBusca
             // 
             this.txtBusca.Location = new System.Drawing.Point(151, 110);
+            this.txtBusca.MaxLength = 30;
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(480, 20);
             this.txtBusca.TabIndex = 1;

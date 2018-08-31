@@ -70,11 +70,11 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Pedido
         public List<PedidoConsultarView> Consultar(string pedido)
         {
             string script =
-                @"SELECT * FROM vw_pedido_consultar WHERE nm_pedido like @nm_pedido";
+                @"SELECT * FROM vw_pedido_consultar WHERE nm_cliente like @nm_cliente";
 
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("nm_pedido", "%" + pedido + "%"));
+            parms.Add(new MySqlParameter("nm_cliente", "%" + pedido + "%"));
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -84,11 +84,13 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Pedido
             {
                 PedidoConsultarView novopedido = new PedidoConsultarView();
                 novopedido.Id = reader.GetInt32("id_pedido");
-                novopedido.Cliente = reader.GetString("id_cliente");
+                novopedido.Cliente = reader.GetString("nm_cliente");
                 novopedido.Venda = reader.GetDateTime("dt_venda");
                 novopedido.formapagamento = reader.GetString("ds_formapagamento");
-                novopedido.qtd_itens = reader.GetInt32("qtd_itens");
+                novopedido.qtd_itens = reader.GetInt32("qtd_items");
                 novopedido.vl_total = reader.GetInt32("vl_total");
+
+                pedidos.Add(novopedido);
             }
             reader.Close();
 

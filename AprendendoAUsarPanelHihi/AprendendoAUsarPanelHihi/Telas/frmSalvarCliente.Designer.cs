@@ -45,11 +45,11 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.lblUser = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTitulo4 = new System.Windows.Forms.Label();
             this.mtbcpf = new System.Windows.Forms.MaskedTextBox();
             this.txtcpf = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mtbcep = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +66,7 @@
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(204, 143);
+            this.txtNome.MaxLength = 40;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(184, 20);
             this.txtNome.TabIndex = 1;
@@ -74,6 +75,7 @@
             // txtSobrenome
             // 
             this.txtSobrenome.Location = new System.Drawing.Point(204, 189);
+            this.txtSobrenome.MaxLength = 20;
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(184, 20);
             this.txtSobrenome.TabIndex = 2;
@@ -112,6 +114,7 @@
             // txtComplemento
             // 
             this.txtComplemento.Location = new System.Drawing.Point(204, 375);
+            this.txtComplemento.MaxLength = 20;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(184, 20);
             this.txtComplemento.TabIndex = 6;
@@ -129,6 +132,7 @@
             // txtncasa
             // 
             this.txtncasa.Location = new System.Drawing.Point(204, 331);
+            this.txtncasa.MaxLength = 5;
             this.txtncasa.Name = "txtncasa";
             this.txtncasa.Size = new System.Drawing.Size(184, 20);
             this.txtncasa.TabIndex = 5;
@@ -164,6 +168,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(533, 188);
+            this.txtEmail.MaxLength = 100;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(184, 20);
             this.txtEmail.TabIndex = 8;
@@ -181,6 +186,7 @@
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(533, 143);
+            this.txtUser.MaxLength = 40;
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(184, 20);
             this.txtUser.TabIndex = 7;
@@ -195,17 +201,6 @@
             this.lblUser.TabIndex = 12;
             this.lblUser.Text = "Usuário:";
             this.lblUser.Click += new System.EventHandler(this.lblUser_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::AprendendoAUsarPanelHihi.Properties.Resources.iconSalvar;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(673, 375);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 75);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblTitulo4
             // 
@@ -239,6 +234,17 @@
             this.mtbcep.Size = new System.Drawing.Size(184, 20);
             this.mtbcep.TabIndex = 4;
             this.mtbcep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbcep_KeyPress);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::AprendendoAUsarPanelHihi.Properties.Resources.iconSalvar;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(673, 375);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(78, 75);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmCadastrar
             // 

@@ -40,21 +40,32 @@ namespace AprendendoAUsarPanelHihi.Telas
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-          
+            try
+            {
+                CategoriaDTO cat = cboCategoria.SelectedItem as CategoriaDTO;
 
-            CategoriaDTO cat = cboCategoria.SelectedItem as CategoriaDTO;
+                InstrumentoDTO inst = new InstrumentoDTO();
+                inst.Nome = txtInstrumento.Text;
+                inst.Preco = nudPrecoA.Value;
+                inst.CategoriaId = cat.Id;
 
-            InstrumentoDTO inst = new InstrumentoDTO();
-            inst.Nome = txtInstrumento.Text;
-            inst.Preco = Convert.ToDecimal(txtprecoI.Text);
-            inst.CategoriaId = cat.Id;
+                InstrumentoBusiness business = new InstrumentoBusiness();
+                business.Salvar(inst);
+                MessageBox.Show("Instrumento salvo com sucesso");
+            }
+            catch (Exception ex)
+            {
+                if (txtInstrumento.Text == "")
+                {
+                    MessageBox.Show("Nome Obrigatório");
+                }
+                if (nudPrecoA.Value <1 )
+                {
+                    MessageBox.Show("Valor não pode ser menor que zero");
+                }
 
-            InstrumentoBusiness business = new InstrumentoBusiness();
-            business.Salvar(inst);
-            MessageBox.Show("Instrumento salvo com sucesso");
-            
+            }
         }
-
         private void txtInstrumento_KeyPress(object sender, KeyPressEventArgs e)
         {
             v.soletras(e);

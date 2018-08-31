@@ -33,15 +33,32 @@ namespace AprendendoAUsarPanelHihi.Telas
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            CategoriaDTO cat = cboCategoria.SelectedItem as CategoriaDTO;
-            AcessorioDTO acess = new AcessorioDTO();
-            acess.Nome = txtAcessorio.Text;
-            acess.Preco = Convert.ToDecimal(txtPrecoA.Text);
-            acess.CategoriaId = cat.Id;
+            try
+            {
+                CategoriaDTO cat = cboCategoria.SelectedItem as CategoriaDTO;
+                AcessorioDTO acess = new AcessorioDTO();
+                acess.Nome = txtAcessorio.Text;
+                acess.Preco = nudPrecoI.Value;
+                acess.CategoriaId = cat.Id;
 
-            AcessorioBusiness business = new AcessorioBusiness();
-            business.Salvar(acess);
-            MessageBox.Show("Acessório salvo com sucesso");
+                AcessorioBusiness business = new AcessorioBusiness();
+                business.Salvar(acess);
+                MessageBox.Show("Acessório salvo com sucesso");
+            }
+            catch(Exception ex)
+            {
+                if(txtAcessorio.Text == "")
+                {
+                    MessageBox.Show("Nome Obrigatório");
+                }
+               
+                else if(nudPrecoI.Value <1)
+                {
+                    MessageBox.Show("Valor não pode ser menor que zero");
+                }
+
+            }
+            
 
         }
 

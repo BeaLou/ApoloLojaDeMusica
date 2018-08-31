@@ -33,24 +33,41 @@
             this.lblBuscar = new System.Windows.Forms.Label();
             this.lblTitulo2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarPedido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvBuscarPedido
             // 
+            this.dgvBuscarPedido.AllowUserToAddRows = false;
+            this.dgvBuscarPedido.AllowUserToDeleteRows = false;
             this.dgvBuscarPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBuscarPedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             this.dgvBuscarPedido.Location = new System.Drawing.Point(3, 186);
             this.dgvBuscarPedido.Name = "dgvBuscarPedido";
+            this.dgvBuscarPedido.ReadOnly = true;
             this.dgvBuscarPedido.Size = new System.Drawing.Size(777, 239);
             this.dgvBuscarPedido.TabIndex = 11;
+            this.dgvBuscarPedido.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBuscarPedido_CellContentClick);
             // 
             // txtBusca
             // 
             this.txtBusca.Location = new System.Drawing.Point(145, 129);
+            this.txtBusca.MaxLength = 30;
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(431, 20);
             this.txtBusca.TabIndex = 8;
+            this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
             // 
             // lblBuscar
             // 
@@ -83,6 +100,43 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "Cliente";
+            this.Column1.HeaderText = "Cliente";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "Venda";
+            this.Column2.HeaderText = "Venda";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "formapagamento";
+            this.Column3.HeaderText = "Forma de Pagamento";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "qtd_itens";
+            this.Column4.HeaderText = "Quantidade de Itens";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "vl_total";
+            this.Column5.HeaderText = "Valor Total";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
             // frmConsultarPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,5 +164,10 @@
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Label lblTitulo2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

@@ -30,13 +30,14 @@
         {
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.lblCategoria = new System.Windows.Forms.Label();
-            this.txtPrecoA = new System.Windows.Forms.TextBox();
             this.lblPrecoA = new System.Windows.Forms.Label();
             this.txtAcessorio = new System.Windows.Forms.TextBox();
             this.lblAcessorio = new System.Windows.Forms.Label();
             this.lblTitulo3 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.PictureBox();
+            this.nudPrecoI = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecoI)).BeginInit();
             this.SuspendLayout();
             // 
             // cboCategoria
@@ -58,14 +59,6 @@
             this.lblCategoria.TabIndex = 24;
             this.lblCategoria.Text = "Categoria:";
             // 
-            // txtPrecoA
-            // 
-            this.txtPrecoA.Location = new System.Drawing.Point(263, 235);
-            this.txtPrecoA.Name = "txtPrecoA";
-            this.txtPrecoA.Size = new System.Drawing.Size(301, 20);
-            this.txtPrecoA.TabIndex = 2;
-            this.txtPrecoA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecoA_KeyPress);
-            // 
             // lblPrecoA
             // 
             this.lblPrecoA.AutoSize = true;
@@ -79,6 +72,7 @@
             // txtAcessorio
             // 
             this.txtAcessorio.Location = new System.Drawing.Point(263, 176);
+            this.txtAcessorio.MaxLength = 30;
             this.txtAcessorio.Name = "txtAcessorio";
             this.txtAcessorio.Size = new System.Drawing.Size(301, 20);
             this.txtAcessorio.TabIndex = 1;
@@ -116,22 +110,30 @@
             this.btnSalvar.TabStop = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // nudPrecoI
+            // 
+            this.nudPrecoI.Location = new System.Drawing.Point(263, 235);
+            this.nudPrecoI.Name = "nudPrecoI";
+            this.nudPrecoI.Size = new System.Drawing.Size(301, 20);
+            this.nudPrecoI.TabIndex = 28;
+            // 
             // frmSalvarAcessorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.nudPrecoI);
             this.Controls.Add(this.lblTitulo3);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.lblCategoria);
-            this.Controls.Add(this.txtPrecoA);
             this.Controls.Add(this.lblPrecoA);
             this.Controls.Add(this.txtAcessorio);
             this.Controls.Add(this.lblAcessorio);
             this.Name = "frmSalvarAcessorio";
             this.Size = new System.Drawing.Size(783, 501);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecoI)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,10 +144,10 @@
         private System.Windows.Forms.PictureBox btnSalvar;
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.TextBox txtPrecoA;
         private System.Windows.Forms.Label lblPrecoA;
         private System.Windows.Forms.TextBox txtAcessorio;
         private System.Windows.Forms.Label lblAcessorio;
         private System.Windows.Forms.Label lblTitulo3;
+        private System.Windows.Forms.NumericUpDown nudPrecoI;
     }
 }

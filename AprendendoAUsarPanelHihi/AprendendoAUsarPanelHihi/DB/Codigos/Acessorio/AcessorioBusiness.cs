@@ -12,8 +12,10 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Acessorio
 
         public int Salvar(AcessorioDTO acessorio)
         {
-            /// faze os if aq 
-
+            if (acessorio.Preco < 1)
+            {
+                throw new ArgumentException("Preço não pode ser menor que zero");
+            }
             return db.Salvar(acessorio);
         }
 

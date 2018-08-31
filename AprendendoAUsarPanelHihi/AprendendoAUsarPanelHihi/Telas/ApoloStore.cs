@@ -89,13 +89,7 @@ namespace AprendendoAUsarPanelHihi
             {
                 panelInicio.Controls.RemoveAt(0);
             }
-
-
-
-            frmLogin tela = new frmLogin();
-            panelInicio.Controls.Add(tela);
         }
-
         private void btnSopro_Click(object sender, EventArgs e)
         {
             if (panelInicio.Controls.Count == 1)

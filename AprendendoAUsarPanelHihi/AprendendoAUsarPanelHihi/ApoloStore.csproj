@@ -71,29 +71,29 @@
     <Compile Include="DB\Codigos\Pedido\PedidoItemBusiness.cs" />
     <Compile Include="DB\Codigos\Pedido\PedidoItemDatabase.cs" />
     <Compile Include="DB\Codigos\Pedido\PedidoItemDTO.cs" />
-    <Compile Include="ApoloStore.cs">
+    <Compile Include="Telas\ApoloStore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApoloStore.Designer.cs">
+    <Compile Include="Telas\ApoloStore.Designer.cs">
       <DependentUpon>ApoloStore.cs</DependentUpon>
     </Compile>
-    <Compile Include="SplashScreen.cs">
+    <Compile Include="Telas\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SplashScreen.Designer.cs">
+    <Compile Include="Telas\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\CadastrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\CadastrarCliente.Designer.cs">
+      <DependentUpon>CadastrarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\frmConsultarInstruAcessorio.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Telas\frmConsultarInstruAcessorio.Designer.cs">
       <DependentUpon>frmConsultarInstruAcessorio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\frmLogin.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Telas\frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\frmlogininicial.cs">
       <SubType>Form</SubType>
@@ -107,7 +107,7 @@
     <Compile Include="Telas\frmSalvarCliente.Designer.cs">
       <DependentUpon>frmSalvarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="DB\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Telas\frmConsultarPedido.cs">
       <SubType>UserControl</SubType>
@@ -133,22 +133,22 @@
     <Compile Include="Telas\frmSalvarPedido.Designer.cs">
       <DependentUpon>frmSalvarPedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserSession.cs" />
-    <Compile Include="Validação.cs" />
-    <EmbeddedResource Include="ApoloStore.resx">
+    <Compile Include="DB\UserSession.cs" />
+    <Compile Include="DB\Validação.cs" />
+    <EmbeddedResource Include="Telas\ApoloStore.resx">
       <DependentUpon>ApoloStore.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen.resx">
+    <EmbeddedResource Include="Telas\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\CadastrarCliente.resx">
+      <DependentUpon>CadastrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmConsultarInstruAcessorio.resx">
       <DependentUpon>frmConsultarInstruAcessorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmConsultarPedido.resx">
       <DependentUpon>frmConsultarPedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmlogininicial.resx">
       <DependentUpon>frmlogininicial.cs</DependentUpon>

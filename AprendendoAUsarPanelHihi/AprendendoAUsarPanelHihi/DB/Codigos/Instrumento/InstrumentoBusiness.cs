@@ -11,6 +11,11 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Instrumento
         InstrumentoDatabase db = new InstrumentoDatabase();
         public int Salvar(InstrumentoDTO instrumento)
         {
+            if (instrumento.Preco < 1)
+            {
+                throw new ArgumentException("Preço não pode ser menor que zero");
+            }
+
             return db.Salvar(instrumento);
         }
         public void Alterar(InstrumentoDTO instrumento)

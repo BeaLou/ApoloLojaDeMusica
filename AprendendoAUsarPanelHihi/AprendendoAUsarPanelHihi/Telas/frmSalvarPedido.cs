@@ -18,10 +18,13 @@ namespace AprendendoAUsarPanelHihi.Telas
     public partial class frmSalvarPedido : UserControl
     {
         Validação v = new Validação();
+
         public frmSalvarPedido()
         {
             InitializeComponent();
             CarregarCombos();
+
+            lblclienti.Text = UserSession.Usuariologado.Nome;
 
             dgvInstrumentos.AutoGenerateColumns = false;
             dgvInstrumentos.DataSource = instrumentos;
@@ -74,6 +77,8 @@ namespace AprendendoAUsarPanelHihi.Telas
             PedidoDTO dto = new PedidoDTO();
             dto.DataVenda = DateTime.Now;
             dto.TipoPagto = cboPagto.Text;
+
+            dto.Id_Cliente = UserSession.Usuariologado.Id;
 
             PedidoBusiness business = new PedidoBusiness();
             business.Salvar(dto, instrumentos.ToList(), acessorio.ToList());
@@ -129,6 +134,11 @@ namespace AprendendoAUsarPanelHihi.Telas
         private void txtquantidadeA_KeyPress(object sender, KeyPressEventArgs e)
         {
             v.sonumeros(e);
+        }
+
+        private void lblclienti_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
