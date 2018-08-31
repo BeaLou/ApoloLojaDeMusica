@@ -50,10 +50,10 @@
             // lblInstrumento
             // 
             this.lblInstrumento.AutoSize = true;
-            this.lblInstrumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstrumento.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInstrumento.Location = new System.Drawing.Point(106, 173);
             this.lblInstrumento.Name = "lblInstrumento";
-            this.lblInstrumento.Size = new System.Drawing.Size(177, 33);
+            this.lblInstrumento.Size = new System.Drawing.Size(140, 35);
             this.lblInstrumento.TabIndex = 2;
             this.lblInstrumento.Text = "Instrumento:";
             this.lblInstrumento.Click += new System.EventHandler(this.lblNome_Click);
@@ -69,20 +69,20 @@
             // lblPrecoI
             // 
             this.lblPrecoI.AutoSize = true;
-            this.lblPrecoI.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecoI.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecoI.Location = new System.Drawing.Point(184, 232);
             this.lblPrecoI.Name = "lblPrecoI";
-            this.lblPrecoI.Size = new System.Drawing.Size(99, 33);
+            this.lblPrecoI.Size = new System.Drawing.Size(74, 35);
             this.lblPrecoI.TabIndex = 4;
             this.lblPrecoI.Text = "Preço:";
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.Location = new System.Drawing.Point(134, 294);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(149, 33);
+            this.lblCategoria.Size = new System.Drawing.Size(113, 35);
             this.lblCategoria.TabIndex = 6;
             this.lblCategoria.Text = "Categoria:";
             // 
@@ -109,10 +109,10 @@
             // lblTitulo5
             // 
             this.lblTitulo5.AutoSize = true;
-            this.lblTitulo5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo5.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo5.Location = new System.Drawing.Point(255, 52);
             this.lblTitulo5.Name = "lblTitulo5";
-            this.lblTitulo5.Size = new System.Drawing.Size(335, 33);
+            this.lblTitulo5.Size = new System.Drawing.Size(254, 35);
             this.lblTitulo5.TabIndex = 20;
             this.lblTitulo5.Text = "Cadastro de Instrumento";
             // 

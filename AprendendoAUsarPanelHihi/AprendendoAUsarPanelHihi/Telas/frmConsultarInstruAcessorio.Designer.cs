@@ -52,20 +52,20 @@
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.Location = new System.Drawing.Point(41, 97);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(104, 33);
+            this.lblBuscar.Size = new System.Drawing.Size(82, 35);
             this.lblBuscar.TabIndex = 2;
             this.lblBuscar.Text = "Busca:";
             // 
             // lblBuscaCategoria
             // 
             this.lblBuscaCategoria.AutoSize = true;
-            this.lblBuscaCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscaCategoria.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscaCategoria.Location = new System.Drawing.Point(77, 141);
             this.lblBuscaCategoria.Name = "lblBuscaCategoria";
-            this.lblBuscaCategoria.Size = new System.Drawing.Size(68, 33);
+            this.lblBuscaCategoria.Size = new System.Drawing.Size(56, 35);
             this.lblBuscaCategoria.TabIndex = 4;
             this.lblBuscaCategoria.Text = "Por:";
             // 
@@ -114,10 +114,10 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(226, 60);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(459, 33);
+            this.lblTitulo.Size = new System.Drawing.Size(342, 35);
             this.lblTitulo.TabIndex = 28;
             this.lblTitulo.Text = "Buscar Acessórios e Instrumentos";
             this.lblTitulo.Click += new System.EventHandler(this.label1_Click);
@@ -147,6 +147,7 @@
             this.Controls.Add(this.lblBuscar);
             this.Name = "frmConsultarInstruAcessorio";
             this.Size = new System.Drawing.Size(783, 501);
+            this.Load += new System.EventHandler(this.frmConsultarInstruAcessorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarAeI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.ResumeLayout(false);

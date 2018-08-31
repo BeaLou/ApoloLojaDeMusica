@@ -42,10 +42,10 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(353, 81);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(86, 33);
+            this.lblTitulo.Size = new System.Drawing.Size(73, 35);
             this.lblTitulo.TabIndex = 30;
             this.lblTitulo.Text = "Login";
             // 
@@ -98,20 +98,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(161, 223);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 33);
+            this.label1.Size = new System.Drawing.Size(82, 35);
             this.label1.TabIndex = 32;
             this.label1.Text = "Senha:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(143, 152);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 33);
+            this.label2.Size = new System.Drawing.Size(97, 35);
             this.label2.TabIndex = 31;
             this.label2.Text = "Usuario:";
             // 

@@ -58,5 +58,10 @@ namespace AprendendoAUsarPanelHihi.Telas
         {
             v.soletras(e);
         }
+
+        private void frmConsultarInstruAcessorio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
