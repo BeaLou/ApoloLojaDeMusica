@@ -166,8 +166,8 @@
             this.cboPagto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPagto.FormattingEnabled = true;
             this.cboPagto.Items.AddRange(new object[] {
-            "Drébito",
-            "Crébito",
+            "Débito",
+            "Crédito",
             "Boleto"});
             this.cboPagto.Location = new System.Drawing.Point(216, 438);
             this.cboPagto.Name = "cboPagto";

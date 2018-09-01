@@ -42,7 +42,7 @@ namespace AprendendoAUsarPanelHihi.Telas
             ClienteBusiness business = new ClienteBusiness();
             business.Salvar(dto);
 
-            MessageBox.Show("Cadastro Feito com sucesso!");
+          
 
         }
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
@@ -75,7 +75,7 @@ namespace AprendendoAUsarPanelHihi.Telas
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void PictureBox1_Click(object sender, EventArgs e)
         {
             ClienteDTO dto = new ClienteDTO();
             dto.Nome = txtNome.Text;
@@ -90,14 +90,55 @@ namespace AprendendoAUsarPanelHihi.Telas
 
             ClienteBusiness business = new ClienteBusiness();
             business.Salvar(dto);
-
+            if(dto.Nome == string.Empty)
+            {
+                MessageBox.Show("Nome é necessário");
+            }
+            if (dto.Sobrenome == string.Empty)
+            {
+                MessageBox.Show("Sobrenome é necessário");
+            }
+            if (dto.CEP== string.Empty)
+            {
+                MessageBox.Show("Cep é necessário");
+            }
+            if (dto.CPF == string.Empty)
+            {
+                MessageBox.Show("Cpf é necessário");
+            }
+            if (dto.NumeroCasa == string.Empty)
+            {
+                MessageBox.Show("Número da casa é necessário");
+            }
+            if (dto.Complemento == string.Empty)
+            {
+                MessageBox.Show("Complemento é necessário");
+            }
+            if (dto.Email == string.Empty)
+            {
+                MessageBox.Show("Email é necessário");
+            }
+            if (dto.Usuario == string.Empty)
+            {
+                MessageBox.Show("Usuário é necessário");
+            }
+            if (dto.Senha== string.Empty)
+            {
+                MessageBox.Show("Senha é necessário");
+            }
+            else { 
             MessageBox.Show("Cadastro Feito com sucesso!");
+                this.Close();
+            }
+
         }
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             frmlogininicial l = new frmlogininicial();
-            l.ShowDialog();
+            l.Show();
+            this.Hide();
 
         }
     }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlogininicial));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtSenhalog = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
@@ -38,7 +39,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Cadastre = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalvar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,7 +112,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Vladimir Script", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(288, 343);
+            this.linkLabel1.Location = new System.Drawing.Point(105, 321);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(0, 18);
             this.linkLabel1.TabIndex = 33;
@@ -120,7 +121,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Vladimir Script", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(195, 364);
+            this.label3.Location = new System.Drawing.Point(12, 342);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(173, 35);
             this.label3.TabIndex = 35;
@@ -137,25 +138,25 @@
             this.btnSalvar.TabStop = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // button1
+            // Cadastre
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Vladimir Script", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(374, 375);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 23);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Cadastre-aqui!";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Cadastre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cadastre.Font = new System.Drawing.Font("Vladimir Script", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cadastre.Location = new System.Drawing.Point(204, 343);
+            this.Cadastre.Name = "Cadastre";
+            this.Cadastre.Size = new System.Drawing.Size(174, 34);
+            this.Cadastre.TabIndex = 36;
+            this.Cadastre.Text = "Cadastre-aqui!";
+            this.Cadastre.UseVisualStyleBackColor = true;
+            this.Cadastre.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmlogininicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(783, 501);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(758, 418);
+            this.Controls.Add(this.Cadastre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
@@ -167,6 +168,7 @@
             this.Controls.Add(this.txtUsuariolog);
             this.Controls.Add(this.lblEmail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmlogininicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmlogininicial";
@@ -188,6 +190,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Cadastre;
     }
 }

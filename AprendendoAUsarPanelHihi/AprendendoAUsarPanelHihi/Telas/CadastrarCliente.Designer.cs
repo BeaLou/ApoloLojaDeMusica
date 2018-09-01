@@ -57,7 +57,7 @@
             // mtbcep
             // 
             this.mtbcep.Location = new System.Drawing.Point(248, 315);
-            this.mtbcep.Mask = "0000000-000";
+            this.mtbcep.Mask = "00000-000";
             this.mtbcep.Name = "mtbcep";
             this.mtbcep.Size = new System.Drawing.Size(184, 20);
             this.mtbcep.TabIndex = 28;
@@ -65,7 +65,7 @@
             // mtbcpf
             // 
             this.mtbcpf.Location = new System.Drawing.Point(248, 266);
-            this.mtbcpf.Mask = "000,000,000-00";
+            this.mtbcpf.Mask = "000.000.000-00";
             this.mtbcpf.Name = "mtbcpf";
             this.mtbcpf.Size = new System.Drawing.Size(184, 20);
             this.mtbcpf.TabIndex = 26;
@@ -83,7 +83,9 @@
             // txtSenha
             // 
             this.txtSenha.Location = new System.Drawing.Point(577, 266);
+            this.txtSenha.MaxLength = 10;
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(184, 20);
             this.txtSenha.TabIndex = 35;
             // 
@@ -100,7 +102,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(577, 217);
-            this.txtEmail.MaxLength = 100;
+            this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(184, 20);
             this.txtEmail.TabIndex = 34;
@@ -234,7 +236,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(78, 75);
             this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -251,7 +253,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 560);
+            this.ClientSize = new System.Drawing.Size(841, 503);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.mtbcep);
             this.Controls.Add(this.mtbcpf);
@@ -274,6 +276,7 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastrarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastrarCliente";

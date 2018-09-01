@@ -63,5 +63,10 @@ namespace AprendendoAUsarPanelHihi.Telas
         {
 
         }
+
+        private void cboBuscarCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

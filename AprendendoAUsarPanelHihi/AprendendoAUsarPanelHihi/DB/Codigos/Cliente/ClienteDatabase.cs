@@ -164,7 +164,6 @@ namespace AprendendoAUsarPanelHihi.DB.Codigos.Cliente
                 cliente.NumeroCasa = reader.GetString("nr_casa");
                 cliente.Complemento = reader.GetString("ds_complemento");
                 cliente.Email = reader.GetString("ds_email");
-               
             }
             reader.Close();
             return cliente;

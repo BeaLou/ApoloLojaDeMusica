@@ -81,6 +81,7 @@
             this.cboBuscarCategoria.Name = "cboBuscarCategoria";
             this.cboBuscarCategoria.Size = new System.Drawing.Size(480, 21);
             this.cboBuscarCategoria.TabIndex = 2;
+            this.cboBuscarCategoria.SelectedIndexChanged += new System.EventHandler(this.cboBuscarCategoria_SelectedIndexChanged);
             // 
             // dgvBuscarAeI
             // 

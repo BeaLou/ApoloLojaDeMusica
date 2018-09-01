@@ -75,5 +75,10 @@ namespace AprendendoAUsarPanelHihi.Telas
         {
             v.sonumeros(e);
         }
+
+        private void nudPrecoA_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

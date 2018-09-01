@@ -102,9 +102,15 @@
             // nudPrecoA
             // 
             this.nudPrecoA.Location = new System.Drawing.Point(289, 245);
+            this.nudPrecoA.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.nudPrecoA.Name = "nudPrecoA";
             this.nudPrecoA.Size = new System.Drawing.Size(301, 20);
             this.nudPrecoA.TabIndex = 21;
+            this.nudPrecoA.ValueChanged += new System.EventHandler(this.nudPrecoA_ValueChanged);
             // 
             // btnSalvar
             // 

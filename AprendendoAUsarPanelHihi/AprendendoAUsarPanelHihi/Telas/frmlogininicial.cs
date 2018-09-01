@@ -33,11 +33,6 @@ namespace AprendendoAUsarPanelHihi.Telas
             {
                 MessageBox.Show("Credenciais inválidas.");
             }
-           
-
-
-
-
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -50,8 +45,9 @@ namespace AprendendoAUsarPanelHihi.Telas
         private void button1_Click(object sender, EventArgs e)
         {
             CadastrarCliente cliente = new CadastrarCliente();
-            cliente.ShowDialog();
+            cliente.Show();
             this.Hide();
+
         }
     }
 }

@@ -18,6 +18,7 @@ namespace AprendendoAUsarPanelHihi
             InitializeComponent();
         }
 
+
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             if (panelInicio.Controls.Count == 1)
@@ -104,6 +105,13 @@ namespace AprendendoAUsarPanelHihi
         private void pictureBox8_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void BtnLog_Click(object sender, EventArgs e)
+        {
+            frmlogininicial cliente = new frmlogininicial();
+            cliente.Show();
+            this.Close();
         }
     }
 }

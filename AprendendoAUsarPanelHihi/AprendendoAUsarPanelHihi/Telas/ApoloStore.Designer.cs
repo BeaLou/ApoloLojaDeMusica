@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApoloStore));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnFiltrar = new System.Windows.Forms.PictureBox();
             this.btnPedido = new System.Windows.Forms.PictureBox();
@@ -37,6 +38,7 @@
             this.panelInicio = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.BtnLog = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFiltrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPedido)).BeginInit();
@@ -45,14 +47,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCordas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnLog)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMenu.Controls.Add(this.btnAcessorio);
+            this.panelMenu.Controls.Add(this.BtnLog);
             this.panelMenu.Controls.Add(this.btnFiltrar);
             this.panelMenu.Controls.Add(this.btnPedido);
-            this.panelMenu.Controls.Add(this.btnAcessorio);
             this.panelMenu.Controls.Add(this.btnSopro);
             this.panelMenu.Controls.Add(this.btnCordas);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -87,7 +91,7 @@
             // 
             this.btnAcessorio.BackgroundImage = global::AprendendoAUsarPanelHihi.Properties.Resources.iconAcessorios;
             this.btnAcessorio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAcessorio.Location = new System.Drawing.Point(12, 204);
+            this.btnAcessorio.Location = new System.Drawing.Point(10, 124);
             this.btnAcessorio.Name = "btnAcessorio";
             this.btnAcessorio.Size = new System.Drawing.Size(78, 80);
             this.btnAcessorio.TabIndex = 5;
@@ -98,7 +102,7 @@
             // 
             this.btnSopro.BackgroundImage = global::AprendendoAUsarPanelHihi.Properties.Resources.iconSopro;
             this.btnSopro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSopro.Location = new System.Drawing.Point(12, 124);
+            this.btnSopro.Location = new System.Drawing.Point(12, 210);
             this.btnSopro.Name = "btnSopro";
             this.btnSopro.Size = new System.Drawing.Size(78, 74);
             this.btnSopro.TabIndex = 4;
@@ -146,6 +150,17 @@
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
+            // BtnLog
+            // 
+            this.BtnLog.Image = ((System.Drawing.Image)(resources.GetObject("BtnLog.Image")));
+            this.BtnLog.Location = new System.Drawing.Point(10, 462);
+            this.BtnLog.Name = "BtnLog";
+            this.BtnLog.Size = new System.Drawing.Size(80, 75);
+            this.BtnLog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BtnLog.TabIndex = 8;
+            this.BtnLog.TabStop = false;
+            this.BtnLog.Click += new System.EventHandler(this.BtnLog_Click);
+            // 
             // ApoloStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,6 +184,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCordas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnLog)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,6 +200,7 @@
         private System.Windows.Forms.Panel panelInicio;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox btnFiltrar;
+        private System.Windows.Forms.PictureBox BtnLog;
     }
 }
 
